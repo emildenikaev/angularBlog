@@ -17,7 +17,7 @@
         Введите поле email
       </small>
       <small *ngIf="form.get('email').errors?.['email']">
-        Поле email должно быть email
+        Поле email должно валидным
       </small>
     </div>
   </div>
@@ -45,7 +45,11 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="form.invalid | submitted"
+  >
     Войти
   </button>
 </form>

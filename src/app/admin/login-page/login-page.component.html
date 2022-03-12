@@ -48,7 +48,7 @@
   <button
     type="submit"
     class="btn btn-primary"
-    [disabled]="form.invalid | submitted"
+    [disabled]="form.invalid || submitted"
   >
     Войти
   </button>

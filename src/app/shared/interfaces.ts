@@ -4,7 +4,7 @@ export interface User {
   returnSecureToken?: boolean
 }
 
-export interface FbAuthResponce {
+export interface FbAuthResponse {
   idToken: string
   expiresIn: string
 }

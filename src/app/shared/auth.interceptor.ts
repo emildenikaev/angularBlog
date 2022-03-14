@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { catchError, Observable, throwError } from "rxjs";
 import { AuthService } from "../admin/shared/services/auth.service";
 
-@Injectable({providedIn: 'root'})
+@Injectable()
 
 export class AuthInterceptor implements HttpInterceptor {
   constructor(
@@ -24,7 +24,7 @@ export class AuthInterceptor implements HttpInterceptor {
       catchError((error: HttpErrorResponse) => {
         if (error.status === 401) {
           this.auth.logout()
-          this.router.navigate(['/admin','login'], {queryParams: {authFailed : true}})
+          this.router.navigate(['/admin', 'login'], {queryParams: {authFailed : true}})
         }
         return throwError(error)
       })

@@ -1,3 +1,5 @@
+This site has 2 main parts: angular blog (blog has posts) and admin-panel (where you can create posts)
+
 # AngularBlog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.

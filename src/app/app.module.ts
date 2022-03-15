@@ -11,6 +11,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/auth.interceptor';
 import { registerLocaleData } from '@angular/common';
 import  ruLocale  from '@angular/common/locales/ru';
+import { LoaderComponent } from './shared/components/loader/loader.component';
 
 registerLocaleData(ruLocale, 'ru')
 
@@ -27,7 +28,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
     MainLayoutComponent,
     HomePageComponent,
     PostPageComponent,
-    PostComponent
+    PostComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
